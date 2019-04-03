@@ -7,7 +7,6 @@
   ],
   "license": "MIT",
   "moduleType": [],
-  "homepage": "http://exploreat.usal.es",
   "private": true,
   "ignore": [
     "**/.*",
@@ -17,33 +16,33 @@
     "tests"
   ],
   "dependencies": {
-    "d3": "^3.5.14",
-    "jquery": "^2.2.0",
-    "wellknown": "^0.4.1",
-    "Wicket": "*",
-    "d3-queue": "^2.0.2",
-    "topojson": "^1.6.22",
-    "d3-tip": "^0.6.7",
-    "jquery-ui": "*",
-    "fontawesome": "*",
-    "noUiSlider-ms": "~6.0.0",
-    "underscore": "~1.8.3",
-    "elasticsearch": "~12.x",
-    "leaflet": "^0.7.7",
-    "latlon-geohash-bobbr": "^1.0.1",
-    "d3-plugins": "*",
-    "d3-carto-map": "https://github.com/ale0xB/d3-carto-map.git",
-    "dcjs": "2.0.0-beta.29",
-    "colorbrewer": "^1.0.0",
-    "w2ui": "^1.4.3",
-    "d3-context-menu": "*",
-    "bootstrap": "^3.3.7"
+    "@bower_components/d3": "^3.5.14",
+    "@bower_components/jquery": "^2.2.0",
+    "@bower_components/wellknown": "^0.4.1",
+    "@bower_components/Wicket": "*",
+    "@bower_components/d3-queue": "^2.0.2",
+    "@bower_components/topojson": "^1.6.22",
+    "@bower_components/d3-tip": "^0.6.7",
+    "@bower_components/jquery-ui": "*",
+    "@bower_components/fontawesome": "*",
+    "@bower_components/noUiSlider-ms": "~6.0.0",
+    "@bower_components/underscore": "~1.8.3",
+    "@bower_components/elasticsearch": "~12.x",
+    "@bower_components/leaflet": "^0.7.7",
+    "@bower_components/latlon-geohash-bobbr": "^1.0.1",
+    "@bower_components/d3-plugins": "*",
+    "@bower_components/d3-carto-map": "https://github.com/ale0xB/d3-carto-map.git",
+    "@bower_components/dcjs": "2.0.0-beta.29",
+    "@bower_components/colorbrewer": "^1.0.0",
+    "@bower_components/w2ui": "^1.4.3",
+    "@bower_components/d3-context-menu": "*",
+    "@bower_components/bootstrap": "^3.3.7"
   },
-  "resolutions": {
-    "d3": "^3.5.14",
-    "jquery": "~2.1.4"
+  "engines" : {
+    "yarn" : ">= 1.0.0"
   },
-  "devDependencies": {
-    "reductio": "^0.5.4"
+  "scripts" : {
+    "build": "webpack --config webpack.prod.js --progress",
+    "postinstall" : "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   }
 }
